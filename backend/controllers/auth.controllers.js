@@ -1,3 +1,5 @@
+
+
 getMe = async (req, res) => {
   res.json({
     user: req.user
@@ -23,6 +25,10 @@ signup = async (req, res) => {
 
 
 logout  = async(req,res)=>{
+res.json({
+  message:"OKAY"
+})
+
 
 }
 

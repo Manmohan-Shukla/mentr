@@ -32,11 +32,34 @@ res.json({
 
 }
 
+
+getMyProfile = async(req,res)=>{
+  res.json({
+    user:req.user
+  })
+}
+
+
+ updateMyProfile = async(req,res)=>{
+  res.json({
+    message:"Profile updated successfully"
+  })
+}
+
+deleteMyProfile = async(req,res)=>{
+  res.json({
+    message:"Profile deleted successfully"
+  })
+}
+
 const authController = {
   signin,
   signup,
   logout,
-  getMe
+  getMe,
+  getMyProfile,
+  updateMyProfile,
+  deleteMyProfile
 };
 
 module.exports = authController;

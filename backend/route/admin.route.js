@@ -13,11 +13,9 @@ router
 
 router
   .route('/session/:id')
-  .get(adminController.getSession)
+  .get(adminController.getSession_by_id)
   .put(adminController.updateSession)
   .delete(adminController.deleteSession);
-
-router.get('/profile', adminController.getProfile);
-router.get('/rating', adminController.getRatingsOverview);   // or whatever it does
+ 
 
 module.exports = router;

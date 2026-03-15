@@ -9,4 +9,10 @@ router.post('/signin', authController.signin);     // ← fixed typo
 router.post('/logout', protect, authController.logout);
 router.get('/me', protect, authController.getMe);
 
+router
+  .route('/profile')
+  .get(authController.getMyProfile)     // same as /me or slightly different projection
+  .patch(authController.updateMyProfile)
+  .delete(authController.deleteMyProfile);
+
 module.exports = router;

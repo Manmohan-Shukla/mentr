@@ -1,0 +1,55 @@
+
+//
+AUTH
+POST /auth/signup
+POST /auth/signin
+GET  /auth/me
+POST /auth/logout
+//
+
+SUPERADMIN
+POST   /superadmin/admins
+GET    /superadmin/admins
+GET    /superadmin/admins/:id
+PUT    /superadmin/admins/:id
+DELETE /superadmin/admins/:id
+
+ADMIN
+POST   /admin/sessions //
+GET    /admin/sessions //
+GET    /admin/sessions/:id //
+PUT    /admin/sessions/:id //
+DELETE /admin/sessions/:id //
+GET    /admin/sessions/:id/bookings 
+GET    /admin/profile //
+GET    /admin/ratings //
+
+
+//
+USER
+GET    /users/me
+GET    /users/me/bookings
+DELETE /users/me/bookings/:id
+//
+
+SESSIONS
+GET    /sessions
+GET    /sessions/:id
+POST   /sessions/:id/book
+
+BOOKINGS
+GET    /bookings/:id
+PUT    /bookings/:id/cancel
+
+RATINGS
+POST   /ratings
+GET    /ratings/admin/:adminId
+GET    /ratings/session/:sessionId
+PUT    /ratings/:id
+DELETE /ratings/:id
+
+SYSTEM
+GET /health
+
+
+ihave /me universal so i donot have to make route USER GET    /users/me but a route for making the booking of session by user should b e there
